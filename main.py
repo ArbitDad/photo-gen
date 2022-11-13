@@ -10,7 +10,8 @@ from webhook import app
 dialog = {
     'hello': {
         'in': ['привет', 'hello', 'hi', 'privet', 'hey'],
-        'out': ['Приветствую', 'Здравствуйте', 'Привет!']
+        def send_photo_url(chat_id, img_url):
+    requests.get(f'{URL}{TOKEN}/sendPhoto?chat_id={chat_id}&photo={img_url}')
     },
     'how r u': {
         'in': ['как дела', 'как ты', 'how are you', 'дела', 'how is it going'],
